@@ -516,8 +516,8 @@ int main(int argc, char **argv)
             laserOdometry.pose.pose.orientation.y = q_w_curr.y();
             laserOdometry.pose.pose.orientation.z = q_w_curr.z();
             laserOdometry.pose.pose.orientation.w = q_w_curr.w();
-            laserOdometry.pose.pose.position.x = -1*t_w_curr.x();
-            laserOdometry.pose.pose.position.y = -1*t_w_curr.y();
+            laserOdometry.pose.pose.position.x = t_w_curr.x();
+            laserOdometry.pose.pose.position.y = t_w_curr.y();
             laserOdometry.pose.pose.position.z = t_w_curr.z();
             pubLaserOdometry.publish(laserOdometry);
 

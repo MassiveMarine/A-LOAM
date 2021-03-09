@@ -222,8 +222,8 @@ void laserOdometryHandler(const nav_msgs::Odometry::ConstPtr &laserOdometry)
 	odomAftMapped.pose.pose.orientation.y = q_w_curr.y();
 	odomAftMapped.pose.pose.orientation.z = q_w_curr.z();
 	odomAftMapped.pose.pose.orientation.w = q_w_curr.w();
-	odomAftMapped.pose.pose.position.x = -1*t_w_curr.x();
-	odomAftMapped.pose.pose.position.y = -1*t_w_curr.y();
+	odomAftMapped.pose.pose.position.x = t_w_curr.x();
+	odomAftMapped.pose.pose.position.y = t_w_curr.y();
 	odomAftMapped.pose.pose.position.z = t_w_curr.z();
 	pubOdomAftMappedHighFrec.publish(odomAftMapped);
 }
@@ -859,8 +859,8 @@ void process()
 			odomAftMapped.pose.pose.orientation.y = q_w_curr.y();
 			odomAftMapped.pose.pose.orientation.z = q_w_curr.z();
 			odomAftMapped.pose.pose.orientation.w = q_w_curr.w();
-			odomAftMapped.pose.pose.position.x = -1*t_w_curr.x();
-			odomAftMapped.pose.pose.position.y = -1*t_w_curr.y();
+			odomAftMapped.pose.pose.position.x = t_w_curr.x();
+			odomAftMapped.pose.pose.position.y = t_w_curr.y();
 			odomAftMapped.pose.pose.position.z = t_w_curr.z();
 			pubOdomAftMapped.publish(odomAftMapped);
 
